@@ -26,15 +26,14 @@ public class MiniKalendar {
 			int month = monthYear[0];
 			// second element
 			int year = monthYear[1];
-			boolean inRange = true;
+			boolean inRange = false;
 			int userChoice = 0;
-			while (inRange) {
-				inRange = false;
+			while (!inRange) {
 				// offer a choice
 				System.out.println("You have next choice : ");
 				userChoice = takeInput("1: Show another month in calendar\n2: Make a note for specific month which is shown\n3: Look at the existing notes\n4: Exit\nEnter a number :");
 
-				if (userChoice < 1 || userChoice > 4) {
+				if (userChoice >= 1 && userChoice <= 4) {
 					inRange = true;
 				}
 			}
